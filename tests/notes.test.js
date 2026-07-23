@@ -1,5 +1,5 @@
 const assert = require('assert');
-const NoteUtils = require('./notes.js');
+const NoteUtils = require('../notes.js');
 
 function test(name, fn) {
   try {
