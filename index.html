@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fallboard — Piano Simulator</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="cabinet">
+    <div class="fallboard">
+      <span class="hinge"></span>
+      <div class="nameplate">
+        <h1>Fallboard</h1>
+        <p>A quiet upright, played on the keys you already own</p>
+      </div>
+      <span class="hinge"></span>
+    </div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="waveform">Voice</label>
+        <select id="waveform">
+          <option value="triangle">Warm — triangle</option>
+          <option value="sine">Soft — sine</option>
+          <option value="sawtooth">Bright — sawtooth</option>
+          <option value="square">Reedy — square</option>
+        </select>
+      </div>
+
+      <div class="control-group octave-stepper">
+        <label>Octave</label>
+        <button id="octaveDown" aria-label="Shift down an octave">–</button>
+        <span class="octave-readout" id="octaveReadout">C4</span>
+        <button id="octaveUp" aria-label="Shift up an octave">+</button>
+      </div>
+
+      <div class="control-group">
+        <label for="volume">Volume</label>
+        <input type="range" id="volume" min="0" max="100" value="75" />
+      </div>
+
+      <button class="theme-toggle" id="themeToggle">Studio: Rosewood</button>
+    </div>
+
+    <div class="keybed">
+      <div class="white-keys" id="whiteKeys"></div>
+    </div>
+
+    <div class="footer-row">
+      <button class="pedal" id="pedal" aria-label="Hold sustain pedal">
+        <span class="felt-strip"></span>
+        Sustain
+      </button>
+    </div>
+    <p class="hint">Play with A–L and their black-key neighbours (W E T Y U O) · Z / X shift octaves · hold Space to sustain</p>
+  </main>
+
+  <script src="https://unpkg.com/tone@14.8.49/build/Tone.js"></script>
+  <script src="notes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
 
